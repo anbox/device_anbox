@@ -20,7 +20,8 @@ include $(SRC_TARGET_DIR)/product/emulator.mk
 PRODUCT_AAPT_CONFIG := normal
 
 RRODUCT_COPY_FILES += \
-	anbox/scripts/anbox-init.sh:root/anbox-init.sh
+	anbox/scripts/anbox-init.sh:root/anbox-init.sh \
+	device/anbox/anbox.xml:system/etc/permissions/anbox.xml
 
 PRODUCT_PACKAGES += \
 	anboxd \
