@@ -23,4 +23,5 @@ RRODUCT_COPY_FILES += \
 	anbox/scripts/anbox-init.sh:root/anbox-init.sh
 
 PRODUCT_PACKAGES += \
-	anboxd
+	anboxd \
+	hwcomposer.anbox
