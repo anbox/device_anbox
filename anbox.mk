@@ -26,3 +26,6 @@ RRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	anboxd \
 	hwcomposer.anbox
+
+DEVICE_PACKAGE_OVERLAYS := \
+	device/anbox/overlay
