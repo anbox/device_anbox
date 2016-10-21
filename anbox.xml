@@ -17,17 +17,6 @@
 <permissions>
     <feature name="android.software.freeform_window_management" />
 
-    <unavailable-feature name="android.hardware.type.automotive" />
-    <!-- FIXME: Once we don't ship a home screen anymore we can
-         remove those things.
-    <unavailable-feature name="android.software.app_widgets" />
-    <unavailable-feature name="android.software.home_screen" />
-    <unavailable-feature name="android.software.live_wallpaper" />
-    -->
-    <!-- Disallow third-party IME apps -->
-    <unavailable-feature name="android.software.input_methods" />
-    <unavailable-feature name="android.software.leanback" />
-    <unavailable-feature name="android.software.live_tv" />
     <!-- Disallow device admin and profile owner on Anbox-->
     <unavailable-feature name="android.software.device_admin" />
     <unavailable-feature name="android.software.managed_users" />
