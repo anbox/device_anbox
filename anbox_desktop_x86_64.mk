@@ -15,10 +15,9 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/board/generic_x86_64/device.mk)
 
-$(call inherit-product, $(LOCAL_PATH)/anbox.mk)
+$(call inherit-product, $(LOCAL_PATH)/anbox_desktop.mk)
 
 PRODUCT_NAME := anbox_x86_64
 PRODUCT_DEVICE := generic_x86_64

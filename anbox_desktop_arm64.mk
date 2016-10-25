@@ -14,15 +14,12 @@
 # limitations under the License.
 #
 
-include $(SRC_TARGET_DIR)/product/emulator.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/board/generic_arm64/device.mk)
 
-# Include drawables for all densities
-PRODUCT_AAPT_CONFIG := normal
+$(call inherit-product, $(LOCAL_PATH)/anbox_desktop.mk)
 
-RRODUCT_COPY_FILES += \
-	anbox/scripts/anbox-init.sh:root/anbox-init.sh \
-	device/anbox/anbox.xml:system/etc/permissions/anbox.xml
-
-PRODUCT_PACKAGES += \
-	anboxd \
-	hwcomposer.anbox
+PRODUCT_NAME := anbox_arm64
+PRODUCT_DEVICE := generic_arm64
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := Anbox on ARM arm64

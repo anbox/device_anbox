@@ -14,13 +14,11 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/board/generic_arm64/device.mk)
-
 $(call inherit-product, $(LOCAL_PATH)/anbox.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-PRODUCT_NAME := anbox_arm64
-PRODUCT_DEVICE := generic_arm64
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Anbox on ARM arm64
+RRODUCT_COPY_FILES += \
+	device/anbox/anbox_desktop.xml:system/etc/permissions/anbox_desktop.xml
+
+DEVICE_PACKAGE_OVERLAYS := \
+	device/anbox/desktop-overlay

@@ -16,3 +16,6 @@
 
 $(call inherit-product, $(LOCAL_PATH)/anbox.mk)
 $(call inherit-product, device/google/atv/products/atv_generic.mk)
+
+RRODUCT_COPY_FILES += \
+	device/anbox/anbox_tv.xml:system/etc/permissions/anbox_tv.xml

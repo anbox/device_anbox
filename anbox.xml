@@ -15,8 +15,6 @@
 -->
 
 <permissions>
-    <feature name="android.software.freeform_window_management" />
-
     <!-- Disallow device admin and profile owner on Anbox-->
     <unavailable-feature name="android.software.device_admin" />
     <unavailable-feature name="android.software.managed_users" />
