@@ -19,10 +19,34 @@ include $(SRC_TARGET_DIR)/product/emulator.mk
 # Include drawables for all densities
 PRODUCT_AAPT_CONFIG := normal
 
-RRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
 	anbox/scripts/anbox-init.sh:root/anbox-init.sh \
 	device/anbox/anbox.xml:system/etc/permissions/anbox.xml
 
 PRODUCT_PACKAGES += \
 	anboxd \
-	hwcomposer.anbox
+	hwcomposer.anbox \
+	AnboxAppMgr
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.hardware=goldfish \
+	ro.hardware.hwcomposer=anbox \
+	ro.kernel.qemu.gles=1 \
+	ro.kernel.qemu=1
+
+# Disable any software key elements in the UI
+PRODUCT_PROPERTY_OVERRIDES += \
+	qemu.hw.mainkeys=1
+
+# Let everything know we're running inside a container
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.anbox=1 \
+	ro.boot.container=1
+
+# We don't want telephony support for now
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.radio.noril=yes
+
+# Disable boot-animation permanently
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.sf.nobootanimation=1

@@ -16,9 +16,11 @@
 
 $(call inherit-product, $(LOCAL_PATH)/anbox.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+# Extend heap size we use for dalvik/art runtime
+$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
-RRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
 	device/anbox/anbox_desktop.xml:system/etc/permissions/anbox_desktop.xml
 
-DEVICE_PACKAGE_OVERLAYS := \
+DEVICE_PACKAGE_OVERLAYS += \
 	device/anbox/desktop-overlay

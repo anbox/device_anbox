@@ -22,4 +22,4 @@ $(call inherit-product, $(LOCAL_PATH)/anbox_desktop.mk)
 PRODUCT_NAME := anbox_arm64
 PRODUCT_DEVICE := generic_arm64
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Anbox on ARM arm64
+PRODUCT_MODEL := Anbox

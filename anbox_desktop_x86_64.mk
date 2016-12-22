@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/board/generic_x86_64/device.mk)
 
 $(call inherit-product, $(LOCAL_PATH)/anbox_desktop.mk)
 
-PRODUCT_NAME := anbox_x86_64
+PRODUCT_NAME := anbox_desktop_x86_64
 PRODUCT_DEVICE := generic_x86_64
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Anbox on x86-64
+PRODUCT_MODEL := Anbox

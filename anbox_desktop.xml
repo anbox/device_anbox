@@ -16,4 +16,12 @@
 
 <permissions>
     <feature name="android.software.freeform_window_management" />
+    <feature name="android.hardware.ethernet" />
+    <unavailable-feature name="android.software.app_widgets" />
+    <unavailable-feature name="android.software.home_screen" />
+    <unavailable-feature name="android.software.input_methods" />
+    <unavailable-feature name="android.software.leanback" />
+    <unavailable-feature name="android.software.live_tv" />
+    <unavailable-feature name="android.software.live_wallpaper" />
 </permissions>
+
