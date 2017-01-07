@@ -1,2 +1,1 @@
 add_lunch_combo anbox_desktop_x86_64-userdebug
-add_lunch_combo anbox_tv_x86_64-userdebug
