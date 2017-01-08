@@ -21,6 +21,3 @@ $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-he
 
 PRODUCT_COPY_FILES += \
 	device/anbox/anbox_desktop.xml:system/etc/permissions/anbox_desktop.xml
-
-DEVICE_PACKAGE_OVERLAYS += \
-	device/anbox/desktop-overlay
