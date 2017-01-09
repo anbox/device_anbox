@@ -43,7 +43,6 @@ PRODUCT_COPY_FILES += \
 	anbox/android/init.goldfish.rc:root/init.goldfish.rc \
 	anbox/android/init.goldfish.sh:system/etc/init.goldfish.sh \
 	anbox/android/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
-	anbox/android/data/apns-conf.xml:system/etc/apns-conf.xml \
 	anbox/android/camera/media_profiles.xml:system/etc/media_profiles.xml \
 	anbox/android/camera/media_codecs.xml:system/etc/media_codecs.xml
 
