@@ -14,7 +14,40 @@
 # limitations under the License.
 #
 
-include $(SRC_TARGET_DIR)/product/emulator.mk
+PRODUCT_PACKAGES += \
+	egl.cfg \
+	gralloc.goldfish \
+	libGLESv1_CM_emulation \
+	lib_renderControl_enc \
+	libEGL_emulation \
+	libGLES_android \
+	libGLESv2_enc \
+	libOpenglSystemCommon \
+	libGLESv2_emulation \
+	libGLESv1_enc \
+	qemu-props \
+	qemud \
+	camera.goldfish \
+	camera.goldfish.jpeg \
+	lights.goldfish \
+	gps.goldfish \
+	fingerprint.goldfish \
+	sensors.goldfish \
+	audio.primary.goldfish \
+	vibrator.goldfish \
+	power.goldfish \
+	fingerprintd
+
+PRODUCT_COPY_FILES += \
+	anbox/android/fstab.goldfish:root/fstab.goldfish \
+	anbox/android/init.goldfish.rc:root/init.goldfish.rc \
+	anbox/android/init.goldfish.sh:system/etc/init.goldfish.sh \
+	anbox/android/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
+	anbox/android/data/apns-conf.xml:system/etc/apns-conf.xml \
+	anbox/android/camera/media_profiles.xml:system/etc/media_profiles.xml \
+	anbox/android/camera/media_codecs.xml:system/etc/media_codecs.xml
+
+PRODUCT_CHARACTERISTICS := emulator
 
 # Include drawables for all densities
 PRODUCT_AAPT_CONFIG := normal
@@ -33,6 +66,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hardware.hwcomposer=anbox \
 	ro.kernel.qemu.gles=1 \
 	ro.kernel.qemu=1
+	ro.adb.qemud=1
 
 # Disable any software key elements in the UI
 PRODUCT_PROPERTY_OVERRIDES += \
