@@ -11,10 +11,6 @@ TARGET_2ND_ARCH_VARIANT := x86
 
 TARGET_USES_64_BIT_BINDER := true
 
-# The IA emulator (qemu) uses the Goldfish devices
-HAVE_HTC_AUDIO_DRIVER := true
-BOARD_USES_GENERIC_AUDIO := true
-
 # no hardware camera
 USE_CAMERA_STUB := true
 
