@@ -15,11 +15,12 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/board/generic_arm64/device.mk)
+$(call inherit-product, $(LOCAL_PATH)/arm64/device.mk)
 
 $(call inherit-product, $(LOCAL_PATH)/anbox_desktop.mk)
 
-PRODUCT_NAME := anbox_arm64
-PRODUCT_DEVICE := generic_arm64
+PRODUCT_NAME := anbox_desktop_arm64
+# We're using device/generic/arm64/BoardConfig.mk here
+PRODUCT_DEVICE := arm64
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Anbox
