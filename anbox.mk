@@ -84,3 +84,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable boot-animation permanently
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.sf.nobootanimation=1
+
+DEVICE_PACKAGE_OVERLAYS += \
+	device/anbox/overlay
