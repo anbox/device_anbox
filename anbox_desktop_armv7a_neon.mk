@@ -17,7 +17,7 @@
 $(call inherit-product, $(LOCAL_PATH)/armv7-a-neon/device.mk)
 $(call inherit-product, $(LOCAL_PATH)/anbox_desktop.mk)
 
-PRODUCT_NAME := anbox_desktop_arm
+PRODUCT_NAME := anbox_desktop_armv7a_neon
 PRODUCT_DEVICE := armv7-a-neon
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Anbox
