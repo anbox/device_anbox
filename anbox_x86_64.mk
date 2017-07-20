@@ -14,10 +14,12 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/anbox.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-# Extend heap size we use for dalvik/art runtime
-$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(LOCAL_PATH)/x86_64/device.mk)
 
-PRODUCT_COPY_FILES += \
-	device/anbox/anbox_desktop.xml:system/etc/permissions/anbox_desktop.xml
+$(call inherit-product, $(LOCAL_PATH)/anbox.mk)
+
+PRODUCT_NAME := anbox_x86_64
+PRODUCT_DEVICE := x86_64
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := Anbox

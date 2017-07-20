@@ -14,12 +14,14 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(LOCAL_PATH)/x86_64/device.mk)
+$(call inherit-product, $(LOCAL_PATH)/armv7-a-neon/device.mk)
+$(call inherit-product, $(LOCAL_PATH)/anbox.mk)
 
-$(call inherit-product, $(LOCAL_PATH)/anbox_desktop.mk)
+# Enable low-mem related options (see https://source.android.com/devices/tech/config/low-ram)
+PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
+PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.jit.codecachesize=0
 
-PRODUCT_NAME := anbox_desktop_x86_64
-PRODUCT_DEVICE := x86_64
+PRODUCT_NAME := anbox_armv7a_neon
+PRODUCT_DEVICE := armv7-a-neon
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Anbox

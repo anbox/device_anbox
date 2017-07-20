@@ -87,3 +87,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 DEVICE_PACKAGE_OVERLAYS += \
 	device/anbox/overlay
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+# Extend heap size we use for dalvik/art runtime
+$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+
+PRODUCT_COPY_FILES += \
+	device/anbox/anbox.xml:system/etc/permissions/anbox.xml
